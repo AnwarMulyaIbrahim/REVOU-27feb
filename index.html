@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agent | Fun Place</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+   <header>
+    <!-- heaader -->
+    <navbar class="container">
+    <div class="navbar">
+        <img class="logo"
+            src="assets/logo3.png"
+            alt="logo">
+        <div class="menu">
+            <a class="menu-item" href="#hero">Home</a>
+            <a class="menu-item" href="#package">Our Package</a>
+            <a class="menu-item" href="#callus">Call Us</a>
+        </div>
+    </div>
+    </navbar>
+   </header>
+   <main>
+    <!-- main -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-title">
+                <h1>Fun Place Tour Agent's</h1>
+                <h6>Fun Place Adalah Travel Agent yang sudah berpengalaman dibidang Tour Agent lebih dari 10th dengan mengedepankan moto "Yor Happiness is our happiness".</h6>
+            </div>
+        </div>
+    </section>
+    <section id="about-contact">
+        <div class="container">
+            <div class="about-contact">
+                <div class="about">
+                    <div class="img-slide">
+                        <img class="about-image" src="https://wallpaperaccess.com/full/35990.jpg" alt="Tokyo">
+                        <img class="about-image" src="https://w0.peakpx.com/wallpaper/327/959/HD-wallpaper-hawaii-sky-water-wolken.jpg" alt="Hawaii">
+                        <img class="about-image" src="https://c4.wallpaperflare.com/wallpaper/117/225/212/antigua-arquitectura-coliseum-roma-wallpaper-preview.jpg"
+                            alt="Roma">
+                        <img class="about-image" src="https://w0.peakpx.com/wallpaper/252/126/HD-wallpaper-mekkah-2011-2013-2012-mecca-mekkah-2011-makkah.jpg" alt="Mekkah">
+                        <img class="about-image" src="https://media.istockphoto.com/id/475439326/photo/bern.jpg?b=1&s=170667a&w=0&k=20&c=qwyVgmjIJ-UPpa_ZjwXILf4umEbO9xocnoYbMVupnlc=" alt="Bern">
+                        <img class="about-image" src="https://p4.wallpaperbetter.com/wallpaper/530/827/653/nature-landscape-water-indonesia-bali-island-lake-temple-asian-architecture-clouds-sunrise-mist-trees-mountains-hills-forest-reflection-morning-wallpaper-preview.jpg" alt="Bali">
+                        <button onclick="PlusDivs(-1)"> > </button>
+                        <button onclick="PlusDivs(1)"> < </button>
+                    </div>
+                    <script>
+                        var slideIndex = 1;
+                        showDivs(slideIndex);
+
+                        function PlusDivs(n) {
+                            showDivs(slideIndex += n);
+                        }
+
+                        function showDivs(n) {
+                            var i;
+                            var x = document.getElementsByClassName("about-image");
+                            if (n > x.length) {slideIndex = 1;}
+                            if (n < 1) { slideIndex = x.length;}
+                            for (i = 0; i < x.length; i++){
+                                x[i].style.display = "none";
+                            } 
+                            x[slideIndex-1].style.display = "block";
+                            
+                            
+                        }
+                        setInterval(() => {
+                          PlusDivs(1);  
+                        }, 2000);
+                    </script>
+                    <div class="about-content">
+                        <div class="content-caption">
+                            <p>"Sebagai orang yang suka berlibur saya sangat puas dengan Pelayanan Yang Diberikan Oleh Fun Place"</p>
+                        </div>
+                        <div class="content-person">
+                            <img src="assets/person-icon.png" alt="person">
+                            <div class="person-info">
+                                <h6>UJANG</h6>
+                                <p>Orang kaya</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="content-line">
+                    <div class="about-information">
+                        <div class="information">
+                            <h6 class="information-title">Travel Agent Fun Place adalah agent travel yang menyediakan paket liburan dalam negri maupunn manca negara yang tentunya kami mengedepankan kepuasan costumer kami dengan moto "Your Happiness is Our Happiness"</h6>
+                            <ul class="information-list">
+                                <li>
+                                    <div class="list-number">1</div>
+                                    <p class="list-paragraf">Travel paling Terpercaya, Sudah lebih dari 1000+ user yang menggunakan jasa kami</p>
+                                </li>
+                                <li>
+                                    <div class="list-number nd">2</div>
+                                    <p class="list-paragraf">Travel Paling Berkualitas, Costumer kamiadalah saksi bagaimana kami memberikan yang terbaik uuntuk perjalan anda</p>
+                                </li>
+                                <li>
+                                    <div class="list-number rd">3</div>
+                                    <p class="list-paragraf">Travel Paling Sukses, Dengan pengalaman kami yang sudah bertahun tahun dalam bidang ini kami sudah meraih 10+ Penghargaan</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="contact-card">
+                        <div class="card-title">
+                            <h4>Mulai berlibur bersama kami!</h4>
+                            <p>Admin Kami akan Langsung Menghubingi Anda Setelah Pesanan Anda Kami Terima.</p>
+                        </div>
+                        <form action="#" name="input-order" onsubmit="return validateform();">
+                           <div class="input">
+                            <label for="">Your Name:</label>
+                            <input type="text" name="name" placeholder="First Name And Last Name...">
+                           </div>
+                            <div class="input">
+                                <label for="">Email:</label>
+                                <input type="text" name="email" placeholder="User@email.com...">
+                            </div>
+                            <div class="input">
+                                <label for="select">Kota Yang Anda Ingin Kunjungi:</label>
+                                <select name="city" id="select">
+                                    <option value="">~Pilih Kota~</option>
+                                    <option value="Tokyo">Tokyo</option>
+                                    <option value="Hawaii">Hawaii</option>
+                                    <option value="Roma">Roma</option>
+                                    <option value="Mekah">Mekkah</option>
+                                    <option value="Bern">Bern</option>
+                                    <option value="Bali">Bali</option>
+                                </select>
+                            </div>
+                            <input class="submit" type="submit" value="PESAN">
+                        </form>
+                        <script>
+                            function validateform(){
+                                var name = document.forms["input-order"]["name"].value;
+                                var email = document.forms["input-order"]["email"].value;
+                                var city = document.forms["input-order"]["city"].value;
+
+                                if (name == "" || email == "" || city == "") {
+                                    alert("Tidak Boleh Ada Yang Kosong, Mohon Priksa Kembali Jawaban Anda.");
+                                    return false;
+                                }
+                                alert("Selamat Pesanan Anda Telah Berhasil!, Admin Akan Segera Menghubungi Anda Mohon Priksa Email Anda.");
+                                return false;
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- List Destination  -->
+    </section>
+    <div class="break">
+        <h1>Our Package</h1>
+    </div>
+    <section id="package">
+        <div class="container">
+            <div class="destination">
+                <div class="destination-list">
+                    <img src="assets/JapanIcon.png" alt="destonation">
+                    <div class="list-info">
+                        <h4>Tokyo</h4>
+                        <p>Tokyo Adalah kota yang mempunyai dua sisi, sisi modern dan sisi sejarah tempant yang sangat sempurna untuk liburan sembari belanja dan menikmati kota yang tidak pernah tidur.</p>
+                    </div>
+                </div>
+                <div class="destination-list">
+                    <img src="assets/HawaiiIcon.avif" alt="destonation">
+                    <div class="list-info">
+                        <h4>Hawaii</h4>
+                        <p>Senang dengan suasana tropis dan pantai?, Hawaii menjadi salah satu pilihan yang tepat bagi anda yang sedang merencanakan liburan untuk mengunjungi pantai yang indah.</p>
+                    </div>
+                </div>
+                <div class="destination-list">
+                    <img class="roma" src="assets/ItaliaIcon.jpg" alt="destonation">
+                    <div class="list-info">
+                        <h4>Roma</h4>
+                        <p>Ingin Merasakan sensasi ditahan kerajaan yang hampir menguasai seluruh dunia?, Kamu bisa kunjungi kota Roma, kota yang penuh sejarah akan perang dan kota yang identik dengan fashion masa kini.</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="destination-break">
+            <div class="second-destination">
+                <div class="destination-listnd">
+                    <img class="mekkah" src="assets/MekkahIcon.jpg" alt="destonation">
+                    <div class="list-info">
+                        <h4>Mekah</h4>
+                        <p>Kami juga menyediakan buat kamu yang ingin berlibur ke tanah suci dengan mengunjungi tempat-tempat bersejarah islami anda juga dapat mengunjungi ka'bah yang menjadi kiblatnya umat islam.</p>
+                    </div>
+                </div>
+                <div class="destination-listnd">
+                    <img class="swiss" src="assets/SwissIcon.jpg" alt="destonation">
+                    <div class="list-info">
+                        <h4>Bern, Swiss</h4>
+                        <p>Keunikan kota ini memiliki banyak bangunan kuno yang dibangun antara tahun 1100-1700-an. Salah satu bangunan yang
+                        terkenal, yakni Katedral Bern yang dibangun dengan desai gothic pada tahun 1400-an.</p>
+                    </div>
+                </div>
+                <div class="destination-listnd">
+                    <img src="assets/BaliIcon.jpg" alt="destonation">
+                    <div class="list-info">
+                        <h4>Bali</h4>
+                        <p>Bali adalah pulau yang sangat indah dengan panjang garis pantai sekitar 633,35 km. Di Pulau Bali terdapat gunung berapi,
+                        sungai-sungai, dan danau. Keberadaan gunung berapi memberikan kesuburan tanah untuk usaha pertanian. Gunung berapi di
+                        Pulau Bali adalah Gunung Batur dan Gunung Agung.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="callus">
+        <div class="call">
+            <h1>Silahkan Hubungi kami</h1>
+            <p>Masih bingung memilih tujuan anda? anda bisa menghubingi admin kami lewat Link di bawah ini anda bisa menanyakan seputar pertanyan anda.</p>
+            <button class="call-action">Hubungi Admin</button>
+        </div>
+    </section>
+   </main>
+   <footer> 
+    <!-- footer -->
+    <div class="foother">
+        <img src="assets/logo3.png" alt="footer-logo">
+        <div class="footer-detail">
+            <div class="up">
+                <p>Terms of Servive</p>
+                <p>Privacy Policy</p>
+            </div>
+            <div class="down">
+                <p>c 2019</p>
+                <p>brand</p>
+            </div>
+        </div>
+    </div>
+   </footer>
+</body>
+</html>
